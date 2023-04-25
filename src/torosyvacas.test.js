@@ -21,9 +21,14 @@ describe("TorosYVacas", () => {
     tyv.adivinar("12395");
     expect(tyv.obtenerPistas()).toEqual("! ! ! - !");
   });
-  /*it("Coincide con un numero", () => {
+  it("Coincide en valor pero no en posicion de un numero", () => {
     let tyv = new TorosYVacas("1234");
     tyv.adivinar("2089");
     expect(tyv.obtenerPistas()).toEqual("* - - -");
-  });*/
+  });
+  it("Coincide en valor pero no en posicion de un numero", () => {
+    let tyv = new TorosYVacas("1234");
+    tyv.adivinar("9100");
+    expect(tyv.obtenerPistas()).toEqual("- * - -");
+  });
 });
